@@ -2,8 +2,8 @@ package 'httpd' do
 	action :install
 end
 
-file '/var/www/html/index.html' do
-	content '<h1>Hello World</h1>'
+template '/var/www/html/index.html' do
+	source 'index.html.erb'
 end
 
 service 'httpd' do
